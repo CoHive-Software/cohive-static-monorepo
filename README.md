@@ -1,5 +1,16 @@
 # CoHive-Site
 
+## Team:
+| Name            | Github           | Role            |
+| --------------- | ---------------- | --------------- |
+| Eric Kuehnemann | @eekbk           | PM              |
+| Andrew V        | @dREWbxKewb      | Dev             |
+| Matt Mekita     | @matthewpmi      | Dev             |
+| Brendan C.      | @opsparkbtc      | Dev             |
+| Ben D.          | @Benthusiast     | Dev             |
+| Miles A.        | @MilesAger       | Dev             |
+| _pending_       | _pending_        | Design          |
+
 ## Development Workflow:
   - Star and Fork the repository you have been assigned
     - `git clone` the repository to your local
