@@ -1,0 +1,28 @@
+import { Metadata } from "next"
+import { lato, abril } from "../public/fonts"
+import { Abril_Fatface, Lato, Roboto_Mono, Inter } from 'next/font/google'
+
+
+import 'app/globals.css'
+
+export const metadata: Metadata = {
+  title: 'CoHive Software',
+  description: 'Welcome to CoHive Software, a leading software engineering company empowering businesses with cutting-edge technology solutions. Our expert team of software engineers delivers exceptional software development, web development, mobile app development, and cloud services. With a focus on innovation and client satisfaction, we provide tailored solutions that optimize your digital presence, enhance efficiency, and drive growth. Contact us today for reliable, scalable, and secure software engineering services that unlock your business\'s true potential.'
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" className={`${lato.variable} ${abril.variable}`}>
+      <body>
+        <h1>CoHive Software</h1>
+        <div>
+          {children}
+        </div>
+        </body>
+    </html>
+  )
+}
