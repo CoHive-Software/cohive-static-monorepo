@@ -1,6 +1,11 @@
-# Turborepo starter
+<p align="center">
+  <img src="packages/ui/assets/Circle_Logo_Light_Text_Square.png" width="100"/>
+</p>
+<p align="center"><em>CoHive Software General Purpose Monorepo</em></p>
 
-This is an official starter Turborepo.
+---
+
+This Monorepo uses the Turborepo starter
 
 ## Using this example
 
@@ -16,9 +21,10 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `web`: [Next.js](https://nextjs.org/) app serving CoHive Software Static site
+- `email-server`: an Amazon SES email server coupled to CoHive Domain
+- `discord-twilio-bot`: a Node.js server to persist Discord Bot with Twilio SDK for SMS and Email push notifications
+- `ui`: a stub React component library shared by both `web` and `docs` applications [tbd]
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
@@ -38,7 +44,7 @@ To build all apps and packages, run the following command:
 
 ```
 cd my-turborepo
-pnpm build
+npm build
 ```
 
 ### Develop
@@ -47,7 +53,7 @@ To develop all apps and packages, run the following command:
 
 ```
 cd my-turborepo
-pnpm dev
+npm dev
 ```
 
 ### Remote Caching
@@ -79,3 +85,24 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+## Adding a new Internal Package [Turbo Repo Docs](https://turbo.build/repo/docs/handbook/sharing-code/internal-packages)
+_for use inside the monorepo_
+### Detailed Step by Step [Example Here](./ADD_MONO_REPO_PACKAGE.md)
+
+## Quick Reference
+### Quick reference - creating a new internal package
+1. Create a new folder in `packages/<folder>`
+2. Add a `package.json`, with name and types pointing at `src/index.ts` (or `src/index.tsx`)
+3. Add `src/index.tsx`, with at least one named export
+4. [Install your packages](https://turbo.build/repo/docs/handbook/package-installation) from root
+
+### Quick reference - importing an internal package
+1. Ensure that you're [importing it correctly](https://turbo.build/repo/docs/handbook/sharing-code/internal-packages#3-import-the-package)
+2. Ensure that you've [configured your app to transpile it](https://turbo.build/repo/docs/handbook/sharing-code/internal-packages#6-configuring-your-app)
+
+## IMPORTANT
+
+Whenever you add/remove **workspaces** or change their locations on the filesystem, you'll need to re-run your `install` command from root to set up your workspaces again.
+
+[Docs](https://turbo.build/repo/docs/handbook/workspaces#managing-workspaces)
