@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+// This is the desktop navbar with most of the layout done //
 export default function DeskNav() {
   return (
     <nav

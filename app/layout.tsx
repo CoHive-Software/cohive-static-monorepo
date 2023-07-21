@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { lato, abril } from '../public/fonts';
 import { Abril_Fatface, Lato, Roboto_Mono, Inter } from 'next/font/google';
 import DeskNav from './components/navbars/deskNav';
+import Footer from './components/navbars/footer';
 
 import 'app/globals.css';
 import Link from 'next/link';
@@ -23,6 +24,7 @@ export default function RootLayout({
         {/* <h1>CoHive Software</h1> */}
         <DeskNav />
         <div>{children}</div>
+        <Footer />
       </body>
     </html>
   );
