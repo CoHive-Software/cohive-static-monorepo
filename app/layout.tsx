@@ -20,9 +20,15 @@ export default function RootLayout({
     <html lang='en' className={`${lato.variable} ${abril.variable}`}>
       <body>
         {/* <h1>CoHive Software</h1> */}
-        <nav className='flex flex-row justify-between text-xl px-3 py-3 border-b-2'>
+        <nav
+          className='flex flex-row justify-between border-b-2 text-xl px-3 py-3 mb-3'
+          style={{ backgroundColor: '#282a38', color: '#FAB222' }}
+        >
           <div>
-            <a>CoHive Software</a>
+            <Link href='/'>CoHive Software</Link>
+          </div>
+          <div>
+            <img src='../public/Logo/CoHive-Ex.png' />
           </div>
           <div className=''>
             <ul className='list-none flex'>
