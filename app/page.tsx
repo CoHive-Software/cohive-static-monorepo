@@ -1,3 +1,11 @@
+import Splash from "./components/views/Splash";
+
 export default function Page() {
-  return <h2 className={'font-sans'}>Hello, CoHive!</h2>
-}
+  return (
+    <>
+      <Splash />
+    </>
+  );
+  //<h2 className={'font-sans'}>Hello, CoHive!</h2>
+
+};
