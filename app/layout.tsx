@@ -24,13 +24,19 @@ export default function RootLayout({
           className='flex flex-row justify-between border-b-2 text-xl px-3 py-3 mb-3'
           style={{ backgroundColor: '#282a38', color: '#FAB222' }}
         >
-          <div className=''>
-            <Link href='/'>CoHive Software</Link>
+          <div className='flex items-center'>
+            <Link
+              href='/'
+              className='text-3xl'
+              style={{ fontFamily: 'var(--font-abril)' }}
+            >
+              CoHive Software
+            </Link>
           </div>
-          <div>
+          <div className='flex items-center'>
             <img src='/Cohive.png' className='w-16 h-16' />
           </div>
-          <div className=''>
+          <div className='flex items-center'>
             <ul className='list-none flex'>
               <li>
                 <Link href='/projects'>Projects</Link>
