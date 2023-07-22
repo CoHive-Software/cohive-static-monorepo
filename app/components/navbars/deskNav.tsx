@@ -31,6 +31,12 @@ export default function DeskNav() {
           <li>
             <Link href='/contact'>Contact Us</Link>
           </li>
+          <li className='mx-4'>
+            <Link href='/services'>Our Services</Link>
+          </li>
+          <li>
+            <Link href='/about'>About Us</Link>
+          </li>
         </ul>
       </div>
     </nav>
