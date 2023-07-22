@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function DeskNav() {
   return (
     <nav
-      className='flex flex-row justify-between border-b-2 text-xl px-3 py-3 mb-3'
+      className='flex flex-row justify-between border-b-2 text-md px-3 py-3 mb-3'
       style={{ backgroundColor: '#282a38', color: '#FAB222' }}
     >
       <div className='flex items-center'>
@@ -23,6 +23,12 @@ export default function DeskNav() {
       <div className='flex items-center'>
         <ul className='list-none flex'>
           <li>
+            <Link href='/about'>About Us</Link>
+          </li>
+          <li className='mx-4'>
+            <Link href='/services'>Services</Link>
+          </li>
+          <li>
             <Link href='/projects'>Projects</Link>
           </li>
           <li className='mx-4'>
@@ -30,12 +36,6 @@ export default function DeskNav() {
           </li>
           <li>
             <Link href='/contact'>Contact Us</Link>
-          </li>
-          <li className='mx-4'>
-            <Link href='/services'>Our Services</Link>
-          </li>
-          <li>
-            <Link href='/about'>About Us</Link>
           </li>
         </ul>
       </div>
