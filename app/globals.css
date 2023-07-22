@@ -7,4 +7,9 @@
     font-size: 4rem;
     font-family: var(--font-abril);
   }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 }
