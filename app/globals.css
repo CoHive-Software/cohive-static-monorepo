@@ -11,5 +11,24 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    --nav-height: 90px;
+    padding-top: var(--nav-height);
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
   }
 }
