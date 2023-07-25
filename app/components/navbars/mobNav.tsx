@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function MobNav() {
+  // This is what give the Hamburger menu its functionality //
   useEffect(() => {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -24,11 +25,12 @@ export default function MobNav() {
       navMenu.classList.remove('active');
     }
   }, []);
+  /////////////////////////////////////////////////////////////
 
   return (
     <>
       <nav
-        className='w-full flex fixed justify-between items-center border-b-2 text-md px-10 py-10 top-0 left-0'
+        className='w-full flex fixed justify-between items-center border-b-2 text-md px-6 py-5 top-0 left-0'
         style={{ backgroundColor: '#282a38' }}
       >
         <a href='/'>

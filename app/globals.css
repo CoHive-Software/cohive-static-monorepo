@@ -40,7 +40,7 @@
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 5rem;
+    top: 6rem;
     flex-direction: column;
     width: 100%;
     border-radius: 10px;
@@ -56,14 +56,16 @@
 
   .nav-item {
     margin: 2.5rem;
+    font-size: 30px;
+    color: #FAB222;
   }
 
 
   .bar {
     display: block;
-    width: 35px;
-    height: 4px;
-    margin: 8px auto;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
     transition: all 0.3s ease-in-out;
     background-color: #FAB222;
   }
@@ -71,6 +73,7 @@
   .hamburger {
     display: block;
     cursor: pointer;
+    width: 75px;
   }
 
   .hamburger.active .bar:nth-child(2) {
