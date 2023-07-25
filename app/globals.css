@@ -8,8 +8,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* --nav-height: 90px; */
-    /* padding-top: var(--nav-height); */
+    --nav-height: 90px;
+    padding-top: var(--nav-height);
   }
 
   h1 {
@@ -47,6 +47,7 @@
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 0px 27px rgba(0, 0, 0, 0.05);
+    background-color: #282a38;
   }
 
   .nav-menu.active {
@@ -60,9 +61,9 @@
 
   .bar {
     display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
+    width: 35px;
+    height: 4px;
+    margin: 8px auto;
     transition: all 0.3s ease-in-out;
     background-color: #FAB222;
   }
@@ -70,5 +71,17 @@
   .hamburger {
     display: block;
     cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 }

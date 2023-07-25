@@ -1,11 +1,34 @@
+'use client';
+import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function MobNav() {
+  useEffect(() => {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', mobileMenu);
+
+    function mobileMenu() {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+
+    navLink.forEach((n) => n.addEventListener('click', closeMenu));
+
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    }
+  }, []);
+
   return (
     <>
       <nav
-        className='flex justify-between item-center p-4'
+        className='w-full flex fixed justify-between items-center border-b-2 text-md px-10 py-10 top-0 left-0'
         style={{ backgroundColor: '#282a38' }}
       >
         <a href='/'>
