@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { lato, abril } from '../public/fonts';
 import { Abril_Fatface, Lato, Roboto_Mono, Inter } from 'next/font/google';
 import DeskNav from './components/navbars/deskNav';
+import MobNav from './components/navbars/mobNav';
 import Footer from './components/navbars/footer';
 
 import 'app/globals.css';
@@ -22,7 +23,8 @@ export default function RootLayout({
     <html lang='en' className={`${lato.variable} ${abril.variable}`}>
       <body>
         {/* <h1>CoHive Software</h1> */}
-        <DeskNav />
+        {/* <DeskNav /> */}
+        <MobNav />
         <div>{children}</div>
         <Footer />
       </body>
