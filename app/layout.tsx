@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import { lato, abril } from '../public/fonts';
 import { Abril_Fatface, Lato, Roboto_Mono, Inter } from 'next/font/google';
 import Navigation from './components/navbars/navigation';
-import MobNav from './components/navbars/mobNav';
 import Footer from './components/navbars/footer';
 
 import 'app/globals.css';

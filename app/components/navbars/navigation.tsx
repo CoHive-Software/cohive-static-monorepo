@@ -9,19 +9,44 @@ export default function Navigation() {
   const [prevScrollY, setPrevScrollY] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
+  // const isMobile = ({ maxWidth = 639 } = {}) => {
+  //   return (
+  //     window.matchMedia("(pointer: coarse)").matches &&
+  //     navigator.maxTouchPoints > 1 &&
+  //     window.matchMedia(`(max-width: ${maxWidth}px)`).matches &&
+  //     "ontouchstart" in document.documentElement
+  //   )
+  // }
+
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+    const handleResize = (event) => {
+      setIsMobile(event.matches);
     };
 
-    window.addEventListener('resize', handleResize);
-
-    handleResize();
+    mediaQuery.addEventListener('change', handleResize);
+    setIsMobile(mediaQuery.matches);
 
     return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
+      mediaQuery.removeEventListener('change', handleResize);
+    };
+  }, []);
+
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth <= 768);
+  //     console.log(isMobile)
+  //   };
+
+  //   window.addEventListener('resize', handleResize);
+
+  //   handleResize();
+
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize)
+  //   }
+  // })
 
   useEffect(() => {
     const handleScroll = () => {
