@@ -7,7 +7,29 @@ import MobNav from './mobNav';
 export default function Navigation() {
   const [isNavHidden, setIsNavHidden] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== 'undefined' && window.innerWidth < 1024
+  );
+
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 1024);
+    }
+
+    if (typeof window !== 'undefined') {
+      handleResize();
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      // remove event listener when the component is unmounted to not cause any memory leaks
+      // otherwise the event listener will continue to be active
+      window.removeEventListener('resize', handleResize);
+    };
+    // add `isMobile` state variable as a dependency so that
+    // it is called every time the window is resized
+  }, [isMobile]);
 
   // const isMobile = ({ maxWidth = 639 } = {}) => {
   //   return (
@@ -18,20 +40,20 @@ export default function Navigation() {
   //   )
   // }
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia('(max-width: 768px)');
 
-    const handleResize = (event) => {
-      setIsMobile(event.matches);
-    };
+  //   const handleResize = (event) => {
+  //     setIsMobile(event.matches);
+  //   };
 
-    mediaQuery.addEventListener('change', handleResize);
-    setIsMobile(mediaQuery.matches);
+  //   mediaQuery.addEventListener('change', handleResize);
+  //   setIsMobile(mediaQuery.matches);
 
-    return () => {
-      mediaQuery.removeEventListener('change', handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     mediaQuery.removeEventListener('change', handleResize);
+  //   };
+  // }, []);
 
   // useEffect(() => {
   //   const handleResize = () => {

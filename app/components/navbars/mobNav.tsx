@@ -41,9 +41,10 @@ export default function MobNav({ isNavHidden }) {
         className='w-full flex fixed justify-between items-center border-b-2 text-md px-6 py-5 top-0 left-0'
         style={{ backgroundColor: '#282a38', animation: `${animationClassName}` }}
       >
-        <a href='/'>
+
+        <Link href='/'>
           <Image src='/Cohive.png' alt='cohiveLogo' width={64} height={64} />
-        </a>
+        </Link>
         <ul className='nav-menu'>
           <li className='nav-item'>
             <Link href='/about'>About Us</Link>
