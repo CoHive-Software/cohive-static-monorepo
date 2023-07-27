@@ -25,7 +25,7 @@ export default function RootLayout({
         {/* <h1>CoHive Software</h1> */}
         {/* <DeskNav /> */}
         <MobNav />
-        <div>{children}</div>
+        <main className='h-full'>{children}</main>
         <Footer />
       </body>
     </html>
