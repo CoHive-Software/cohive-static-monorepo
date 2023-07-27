@@ -1,10 +1,11 @@
-"use client"
-import { useEffect, useState } from 'react';
+'use client'
+import { useLayoutEffect, useEffect, useState } from 'react';
 import DeskNav from './deskNav';
 import MobNav from './mobNav';
 
 // This is the desktop navbar with most of the layout done //
 export default function Navigation() {
+  const [isLoading, setIsLoading] = useState(true);
   const [isNavHidden, setIsNavHidden] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
   const [isMobile, setIsMobile] = useState(
@@ -12,7 +13,7 @@ export default function Navigation() {
   );
 
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     function handleResize() {
       setIsMobile(window.innerWidth < 1024);
     }
@@ -31,44 +32,9 @@ export default function Navigation() {
     // it is called every time the window is resized
   }, [isMobile]);
 
-  // const isMobile = ({ maxWidth = 639 } = {}) => {
-  //   return (
-  //     window.matchMedia("(pointer: coarse)").matches &&
-  //     navigator.maxTouchPoints > 1 &&
-  //     window.matchMedia(`(max-width: ${maxWidth}px)`).matches &&
-  //     "ontouchstart" in document.documentElement
-  //   )
-  // }
-
-  // useEffect(() => {
-  //   const mediaQuery = window.matchMedia('(max-width: 768px)');
-
-  //   const handleResize = (event) => {
-  //     setIsMobile(event.matches);
-  //   };
-
-  //   mediaQuery.addEventListener('change', handleResize);
-  //   setIsMobile(mediaQuery.matches);
-
-  //   return () => {
-  //     mediaQuery.removeEventListener('change', handleResize);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsMobile(window.innerWidth <= 768);
-  //     console.log(isMobile)
-  //   };
-
-  //   window.addEventListener('resize', handleResize);
-
-  //   handleResize();
-
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize)
-  //   }
-  // })
+  useLayoutEffect(() => {
+    setIsLoading(false);
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,6 +55,10 @@ export default function Navigation() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [isNavHidden, prevScrollY]);
+
+  if (isLoading) {
+    return null;
+  }
 
   return (
     <>

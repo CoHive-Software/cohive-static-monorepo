@@ -1,10 +1,9 @@
-'use client';
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 function useMobileMenu() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
