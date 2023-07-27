@@ -25,7 +25,7 @@ module.exports = {
         serif: ['var(--font-abril)', 'serif'],
         sans: ['var(--font-lato)', ...fontFamily.sans],
       },
-      splashBackgroundImage: "url(/beehiveImage.jpg",
+      splashBackgroundImage: "url(/honeycombGradient.jpg)",
     },
   },
   plugins: [],
