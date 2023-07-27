@@ -16,6 +16,5 @@ export default function Splash() {
 
     </div>
   );
-  // Contact us button on this view
 };
 
