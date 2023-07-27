@@ -1,6 +1,9 @@
 import { Metadata } from 'next';
 import { lato, abril } from '../public/fonts';
 import { Abril_Fatface, Lato, Roboto_Mono, Inter } from 'next/font/google';
+import DeskNav from './components/navbars/deskNav';
+import MobNav from './components/navbars/mobNav';
+import Footer from './components/navbars/footer';
 
 import 'app/globals.css';
 import Link from 'next/link';
@@ -20,31 +23,10 @@ export default function RootLayout({
     <html lang='en' className={`${lato.variable} ${abril.variable}`}>
       <body>
         {/* <h1>CoHive Software</h1> */}
-        <nav
-          className='flex flex-row justify-between border-b-2 text-xl px-3 py-3 mb-3'
-          style={{ backgroundColor: '#282a38', color: '#FAB222' }}
-        >
-          <div>
-            <Link href='/'>CoHive Software</Link>
-          </div>
-          <div>
-            <img src='../public/Logo/CoHive-Ex.png' />
-          </div>
-          <div className=''>
-            <ul className='list-none flex'>
-              <li>
-                <Link href='/projects'>Projects</Link>
-              </li>
-              <li className='mx-4'>
-                <Link href='/blog'>Blogs</Link>
-              </li>
-              <li>
-                <Link href='/contact'>Contact Us</Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
+        {/* <DeskNav /> */}
+        <MobNav />
         <div>{children}</div>
+        <Footer />
       </body>
     </html>
   );
