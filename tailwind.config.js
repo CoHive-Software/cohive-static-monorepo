@@ -18,14 +18,14 @@ module.exports = {
         'light': '#FECE3C',
         DEFAULT: '#FCAB1C',
       },
-      'brown': 'C17E2F'
+      'brown': '#C17E2F'
     },
     extend: {
       fontFamily: {
         serif: ['var(--font-abril)', 'serif'],
         sans: ['var(--font-lato)', ...fontFamily.sans],
       },
-      splashBackgroundImage: "url(/beehiveImage.jpg",
+      splashBackgroundImage: "url(/honeycombGradient.jpg)",
     },
   },
   plugins: [],
