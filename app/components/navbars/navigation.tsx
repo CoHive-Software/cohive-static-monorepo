@@ -4,33 +4,10 @@ import DeskNav from './deskNav';
 import MobNav from './mobNav';
 
 // This is the desktop navbar with most of the layout done //
-export default function Navigation() {
+export default function TestNav() {
   const [isLoading, setIsLoading] = useState(true);
   const [isNavHidden, setIsNavHidden] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== 'undefined' && window.innerWidth < 1024
-  );
-
-
-  useLayoutEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 1024);
-    }
-
-    if (typeof window !== 'undefined') {
-      handleResize();
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      // remove event listener when the component is unmounted to not cause any memory leaks
-      // otherwise the event listener will continue to be active
-      window.removeEventListener('resize', handleResize);
-    };
-    // add `isMobile` state variable as a dependency so that
-    // it is called every time the window is resized
-  }, [isMobile]);
 
   useLayoutEffect(() => {
     setIsLoading(false);
@@ -61,8 +38,13 @@ export default function Navigation() {
   }
 
   return (
-    <>
-      {!isMobile ? <DeskNav isNavHidden={isNavHidden} /> : <MobNav isNavHidden={isNavHidden} />}
-    </>
-  );
+    <div>
+      <div className='hidden md:block'>
+        <DeskNav isNavHidden={isNavHidden} />
+      </div>
+      <div className='md:hidden z-10'>
+        <MobNav isNavHidden={isNavHidden} />
+      </div>
+    </div>
+  )
 }
