@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
+import React, { useEffect, useState } from 'react';
 import { lato, abril } from '../public/fonts';
 import { Abril_Fatface, Lato, Roboto_Mono, Inter } from 'next/font/google';
-import DeskNav from './components/navbars/deskNav';
-import MobNav from './components/navbars/mobNav';
+import Navigation from './components/navbars/navigation';
 import Footer from './components/navbars/footer';
 
 import 'app/globals.css';
@@ -19,12 +19,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+
   return (
     <html lang='en' className={`${lato.variable} ${abril.variable}`}>
       <body>
         {/* <h1>CoHive Software</h1> */}
-        {/* <DeskNav /> */}
-        <MobNav />
+        <Navigation />
         <main className='h-full'>{children}</main>
         <Footer />
       </body>
