@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -32,21 +32,31 @@ export default function DeskNav() {
     <>
       {isNavHidden && (
         <nav
-          className="w-full flex fixed justify-between border-b-2 text-md px-3 py-3 top-0 left-0"
-          style={{ backgroundColor: '#282a38', color: '#FAB222', animation: 'slideOut 0.3s ease-out forwards' }}
+          className='w-11/12 flex fixed justify-between border-b-2 text-lg px-3 py-3 top-0 left-20'
+          style={{
+            backgroundColor: '#282a38',
+            color: '#FAB222',
+            animation: 'slideOut 0.3s ease-out forwards',
+          }}
         >
-          <div className='flex items-center'>
-            <Link
-              href='/'
-              className='text-3xl'
-              style={{ fontFamily: 'var(--font-abril)' }}
-            >
-              CoHive Software
-            </Link>
-          </div>
-          <div className='flex items-center'>
-            <Image src='/Cohive.png' alt='cohiveLogo' width={64} height={64} />
-          </div>
+          <a href='/' className='flex items-center'>
+            <div>
+              <Image
+                src='/whiteLogo.svg'
+                alt='cohiveLogo'
+                width={64}
+                height={64}
+              />
+            </div>
+            <div className='ml-4'>
+              <Image
+                src='/CoHiveWhiteText.svg'
+                alt='CoHiveText'
+                width={131.39}
+                height={28}
+              />
+            </div>
+          </a>
           <div className='flex items-center'>
             <ul className='list-none flex'>
               <li>
@@ -70,21 +80,31 @@ export default function DeskNav() {
       )}
       {!isNavHidden && (
         <nav
-          className="w-full flex fixed justify-between border-b-2 text-md px-3 py-3 top-0 left-0"
-          style={{ backgroundColor: '#282a38', color: '#FAB222', animation: 'slideIn 0.3s ease-out forwards' }}
+          className='w-11/12 flex fixed justify-between border-b-2 text-lg px-3 py-3 top-0 left-20'
+          style={{
+            backgroundColor: '#282a38',
+            color: '#FFFFFF',
+            animation: 'slideIn 0.3s ease-out forwards',
+          }}
         >
-          <div className='flex items-center'>
-            <Link
-              href='/'
-              className='text-3xl'
-              style={{ fontFamily: 'var(--font-abril)' }}
-            >
-              CoHive Software
-            </Link>
-          </div>
-          <div className='flex items-center'>
-            <Image src='/Cohive.png' alt='cohiveLogo' width={64} height={64} />
-          </div>
+          <a href='/' className='flex items-center'>
+            <div>
+              <Image
+                src='/whiteLogo.svg'
+                alt='cohiveLogo'
+                width={64}
+                height={64}
+              />
+            </div>
+            <div className='ml-4'>
+              <Image
+                src='/CoHiveWhiteText.svg'
+                alt='CoHiveText'
+                width={131.39}
+                height={28}
+              />
+            </div>
+          </a>
           <div className='flex items-center'>
             <ul className='list-none flex'>
               <li>
