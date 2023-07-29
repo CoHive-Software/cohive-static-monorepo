@@ -1,62 +1,40 @@
-'use client';
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// This is the desktop navbar with most of the layout done //
-export default function DeskNav() {
-  const [isNavHidden, setIsNavHidden] = useState(false);
-  const [prevScrollY, setPrevScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-
-      if (scrollY > prevScrollY && !isNavHidden) {
-        setIsNavHidden(true);
-      } else if (scrollY < prevScrollY && isNavHidden) {
-        setIsNavHidden(false);
-      }
-
-      setPrevScrollY(scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [isNavHidden, prevScrollY]);
+export default function DeskNav({ isNavHidden }) {
+  const animationClassName = isNavHidden
+    ? 'slideOut 0.3s ease-out forwards'
+    : 'slideIn 0.3s ease-out forwards';
 
   return (
     <>
       {isNavHidden && (
         <nav
-          className='w-11/12 flex fixed justify-between border-b-2 text-lg px-3 py-3 top-0 left-20'
+          className='w-full flex fixed justify-between border-b-2 text-md px-3 py-3 top-0 left-0'
           style={{
             backgroundColor: '#282a38',
             color: '#FAB222',
             animation: 'slideOut 0.3s ease-out forwards',
           }}
         >
-          <a href='/' className='flex items-center'>
-            <div>
+          <div className='flex items-center'>
+            <Link href='/' className='flex items-center'>
               <Image
+                className='mr-2'
                 src='/whiteLogo.svg'
                 alt='cohiveLogo'
                 width={64}
                 height={64}
               />
-            </div>
-            <div className='ml-4'>
               <Image
+                className='ml-2'
                 src='/CoHiveWhiteText.svg'
-                alt='CoHiveText'
-                width={131.39}
+                alt='CoHiveName'
+                width={100}
                 height={28}
               />
-            </div>
-          </a>
+            </Link>
+          </div>
           <div className='flex items-center'>
             <ul className='list-none flex'>
               <li>
@@ -80,31 +58,31 @@ export default function DeskNav() {
       )}
       {!isNavHidden && (
         <nav
-          className='w-11/12 flex fixed justify-between border-b-2 text-lg px-3 py-3 top-0 left-20'
+          className='w-full flex fixed justify-between border-b-2 text-md px-3 py-3 top-0 left-0'
           style={{
             backgroundColor: '#282a38',
-            color: '#FFFFFF',
+            color: '#FAB222',
             animation: 'slideIn 0.3s ease-out forwards',
           }}
         >
-          <a href='/' className='flex items-center'>
-            <div>
+          <div className='flex items-center'>
+            <Link href='/' className='flex items-center'>
               <Image
+                className='mr-2'
                 src='/whiteLogo.svg'
                 alt='cohiveLogo'
                 width={64}
                 height={64}
               />
-            </div>
-            <div className='ml-4'>
               <Image
+                className='ml-2'
                 src='/CoHiveWhiteText.svg'
-                alt='CoHiveText'
-                width={131.39}
+                alt='CoHiveName'
+                width={100}
                 height={28}
               />
-            </div>
-          </a>
+            </Link>
+          </div>
           <div className='flex items-center'>
             <ul className='list-none flex'>
               <li>
