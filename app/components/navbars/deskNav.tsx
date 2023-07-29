@@ -10,7 +10,7 @@ export default function DeskNav({ isNavHidden }) {
     <>
       {isNavHidden && (
         <nav
-          className='w-full flex fixed justify-between border-b-2 text-md px-3 py-3 top-0 left-0'
+          className='w-11/12 flex fixed justify-between border-b-2 text-md px-3 py-3 top-3 left-20'
           style={{
             backgroundColor: '#282a38',
             color: '#FAB222',
@@ -30,7 +30,7 @@ export default function DeskNav({ isNavHidden }) {
                 className='ml-2'
                 src='/CoHiveWhiteText.svg'
                 alt='CoHiveName'
-                width={100}
+                width={150}
                 height={28}
               />
             </Link>
@@ -58,10 +58,10 @@ export default function DeskNav({ isNavHidden }) {
       )}
       {!isNavHidden && (
         <nav
-          className='w-full flex fixed justify-between border-b-2 text-md px-3 py-3 top-0 left-0'
+          className='w-11/12 flex fixed justify-between border-b-2 text-lg px-3 py-3 top-3 left-20'
           style={{
             backgroundColor: '#282a38',
-            color: '#FAB222',
+            color: '#FFFFFF',
             animation: 'slideIn 0.3s ease-out forwards',
           }}
         >
@@ -78,7 +78,7 @@ export default function DeskNav({ isNavHidden }) {
                 className='ml-2'
                 src='/CoHiveWhiteText.svg'
                 alt='CoHiveName'
-                width={100}
+                width={125}
                 height={28}
               />
             </Link>

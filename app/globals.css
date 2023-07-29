@@ -43,10 +43,11 @@
   .nav-menu {
     position: fixed;
     left: 0;
-    top: -100%;
+    top: -1000%;
     flex-direction: column;
     width: 100%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border-bottom-width: 2px;
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 0px 27px rgba(0, 0, 0, 0.05);
@@ -58,8 +59,8 @@
   }
 
   .nav-item {
-    margin: 2.5rem;
-    font-size: 30px;
+    margin: 2rem;
+    font-size: 25px;
     color: #FFFFFF;
   }
 
@@ -76,7 +77,7 @@
   .hamburger {
     display: block;
     cursor: pointer;
-    width: 75px;
+    width: 50px;
   }
 
   .hamburger.active .bar:nth-child(2) {
