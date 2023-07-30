@@ -14,6 +14,12 @@ module.exports = {
       'black': '#282A38',
       'pearl': '#FDFAEC',
       'yellow': '#FFF2AA',
+      'gray': {
+        'light':'#bcbdc1',
+        'mid': '#93949b',
+        DEFAULT:'#424450'
+    },
+
       'orange': {
         'light': '#FECE3C',
         DEFAULT: '#FCAB1C',
