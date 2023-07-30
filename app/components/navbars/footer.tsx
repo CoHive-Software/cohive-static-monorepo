@@ -4,42 +4,47 @@ import Image from 'next/image';
 export default function Footer() {
   return (
     <footer
-      className='flex-row justify-center'
+      className='flex flex-column justify-center w-full'
       style={{
         backgroundColor: '#282a38',
-        color: '#FAB222',
-        marginTop: 'auto',
+        color: '#FFFFFF',
       }}
     >
-      <div className='w-full flex-column justify-center px-96'>
-        <div className='w-full flex flex-row justify-between text-md px-3 py-3 mb-3'>
-          <Image
-            src='/wideLogo.png'
-            alt='wideCohive'
-            width={192}
-            height={192}
-          />
-          <div className='flex items-center'>
-            <ul className='list-none flex'>
-              <li>
-                <Link href='/about'>About Us</Link>
-              </li>
-              <li className='mx-4'>
-                <Link href='/services'>Services</Link>
-              </li>
-              <li>
-                <Link href='/projects'>Projects</Link>
-              </li>
-              <li className='mx-4'>
-                <Link href='/blog'>Blogs</Link>
-              </li>
-              <li>
-                <Link href='/contact'>Contact Us</Link>
-              </li>
-            </ul>
+      <div className='w-7/12 flex flex-col justify-center border-t mx-auto'>
+        <div className='w-full flex flex-col md:flex-row justify-center md:justify-between flex-wrap text-md py-3 mb-3'>
+          <div className='md:w-auto md:order-1'>
+            <div className='flex items-center justify-center md:justify-start'>
+              <Link href='/' className='flex items-center'>
+                <Image
+                  className='mr-2'
+                  src='/whiteLogo.svg'
+                  alt='cohiveLogo'
+                  width={64}
+                  height={64}
+                />
+                <Image
+                  className='ml-2'
+                  src='/CoHiveWhiteText.svg'
+                  alt='CoHiveName'
+                  width={150}
+                  height={28}
+                />
+              </Link>
+            </div>
+          </div>
+          <div className='flex flex-wrap justify-center md:justify-start md:items-center md:order-2'>
+            <Link className='mx-4 my-2' href='/projects'>
+              projects
+            </Link>
+            <Link className='mx-4 my-2' href='/blog'>
+              blog
+            </Link>
+            <Link className='mx-4 my-2' href='/contact'>
+              contact
+            </Link>
           </div>
         </div>
-        <div className='w-full flex justify-between text-xl px-3 py-3 border-t'>
+        <div className='w-full flex justify-between text-xl px-3 py-3'>
           <div className='text-xs'>All Rights Reserved</div>
           <div className='flex items-center'>
             <ul className='list-none flex'>
