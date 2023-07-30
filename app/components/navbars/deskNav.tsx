@@ -2,24 +2,36 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function DeskNav({ isNavHidden }) {
-  const animationClassName = isNavHidden ? 'slideOut 0.3s ease-out forwards' : 'slideIn 0.3s ease-out forwards';
+  const animationClassName = isNavHidden
+    ? 'slideOut 0.3s ease-out forwards'
+    : 'slideIn 0.3s ease-out forwards';
 
   return (
     <nav
-      className="w-full flex fixed justify-between border-b-2 text-md px-3 py-3 top-0 left-0"
-      style={{ backgroundColor: '#282a38', color: '#FAB222', animation: `${animationClassName}` }}
+      className='w-11/12 flex fixed justify-between border-b-2 text-md px-3 py-3 top-3 left-20'
+      style={{
+        backgroundColor: '#282a38',
+        color: '#FFFFFF',
+        animation: `${animationClassName}`,
+      }}
     >
       <div className='flex items-center'>
-        <Link
-          href='/'
-          className='text-3xl'
-          style={{ fontFamily: 'var(--font-abril)' }}
-        >
-          CoHive Software
+        <Link href='/' className='flex items-center'>
+          <Image
+            className='mr-2'
+            src='/whiteLogo.svg'
+            alt='cohiveLogo'
+            width={64}
+            height={64}
+          />
+          <Image
+            className='ml-2'
+            src='/CoHiveWhiteText.svg'
+            alt='CoHiveName'
+            width={150}
+            height={28}
+          />
         </Link>
-      </div>
-      <div className='flex items-center'>
-        <Image src='/Cohive.png' alt='cohiveLogo' width={64} height={64} />
       </div>
       <div className='flex items-center'>
         <ul className='list-none flex'>

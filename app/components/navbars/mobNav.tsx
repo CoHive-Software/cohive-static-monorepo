@@ -26,24 +26,32 @@ function useMobileMenu() {
 }
 
 export default function MobNav({ isNavHidden }) {
-
-
   // This is what give the Hamburger menu its functionality //
   useMobileMenu();
   /////////////////////////////////////////////////////////////
 
-  const animationClassName = isNavHidden ? 'slideOut 0.3s ease-out forwards' : 'slideIn 0.3s ease-out forwards';
+  const animationClassName = isNavHidden
+    ? 'slideOut 0.3s ease-out forwards'
+    : 'slideIn 0.3s ease-out forwards';
 
   return (
     <>
       <nav
-        className='w-full flex fixed justify-between items-center border-b-2 text-md px-6 py-5 top-0 left-0'
-        style={{ backgroundColor: '#282a38', animation: `${animationClassName}` }}
+        className='w-full flex fixed justify-between items-center border-b-2 text-md px-6 py-5 top-0 left-0 z-50'
+        style={{
+          backgroundColor: '#282a38',
+          animation: `${animationClassName}`,
+        }}
       >
-
-        <Link href='/'>
-          <Image src='/Cohive.png' alt='cohiveLogo' width={64} height={64} />
-        </Link>
+        <a href='/' className='z-50'>
+          <Image
+            className='z-50'
+            src='/whiteLogo.svg'
+            alt='cohiveLogo'
+            width={64}
+            height={64}
+          />
+        </a>
         <ul className='nav-menu'>
           <li className='nav-item'>
             <Link href='/about'>About Us</Link>

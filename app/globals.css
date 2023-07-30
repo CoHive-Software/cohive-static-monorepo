@@ -42,11 +42,12 @@
 
   .nav-menu {
     position: fixed;
-    left: -100%;
-    top: 6rem;
+    left: 0;
+    top: -1000%;
     flex-direction: column;
     width: 100%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border-bottom-width: 2px;
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 0px 27px rgba(0, 0, 0, 0.05);
@@ -54,13 +55,13 @@
   }
 
   .nav-menu.active {
-    left: 0;
+    top: 5.1rem;
   }
 
   .nav-item {
-    margin: 2.5rem;
-    font-size: 30px;
-    color: #FAB222;
+    margin: 2rem;
+    font-size: 25px;
+    color: #FFFFFF;
   }
 
 
@@ -70,13 +71,13 @@
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background-color: #FAB222;
+    background-color: #FFFFFF;
   }
 
   .hamburger {
     display: block;
     cursor: pointer;
-    width: 75px;
+    width: 50px;
   }
 
   .hamburger.active .bar:nth-child(2) {
