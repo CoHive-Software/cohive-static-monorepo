@@ -23,7 +23,7 @@ export default function RootLayout({
       <body>
         <Navigation />
         <main className='h-full my-8 mx-5'>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
