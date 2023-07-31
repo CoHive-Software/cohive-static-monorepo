@@ -2,8 +2,8 @@ import ContactUsButton from "../buttons/ContactUsButton";
 
 export default function Services() {
   return (
-    <div className="flex justify-center items-center p-2">
-    <div className="grid grid-cols-1 mx-6 p-2 md:grid-cols-3 gap-4 w-4/5 [&>*]:my-3">
+    <div className="flex justify-center items-center p-2 mb-16">
+      <div className="grid grid-cols-1 mx-6 p-4 md:grid-cols-3 gap-4 w-4/5 [&>*]:my-3">
       {/* Custom Software Development */}
       <div className="bg-gradient-to-t from-gray to-gray-mid p-4 rounded-lg flex flex-col justify-center items-center">
         <h3 className="text-center text-pearl text-lg font-bold mb-2">Custom Software Development</h3>
