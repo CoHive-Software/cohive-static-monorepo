@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <div className="h-full">
       <Splash />
-      <AboutUs />
+      {/* <AboutUs /> */}
       <Services />
     </div>
   );
