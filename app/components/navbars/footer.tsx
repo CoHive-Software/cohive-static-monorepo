@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Contact from '../contact/contact'
 
 export default function Footer() {
   return (
@@ -44,6 +45,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
+        <Contact />
         <div className='w-full flex justify-between text-xl px-3 py-3'>
           <div className='text-xs'>All Rights Reserved</div>
           <div className='flex items-center'>
@@ -61,7 +63,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div></div>
       </div>
     </footer>
   );
