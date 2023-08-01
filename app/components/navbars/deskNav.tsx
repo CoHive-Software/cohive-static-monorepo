@@ -9,7 +9,7 @@ export default function DeskNav({ isNavHidden }) {
   return (
     <div className='flex justify-center'>
       <nav
-        className='w-10/12 flex fixed justify-between border-b-2 text-md px-3 py-6 top-3'
+        className='w-10/12 flex fixed justify-between border-b-2 text-md px-3 py-6 top-0'
         style={{
           backgroundColor: '#282a38',
           color: '#FFFFFF',
