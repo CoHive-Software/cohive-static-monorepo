@@ -38,7 +38,7 @@ export default function TestNav() {
   }
 
   return (
-    <div>
+    <div className='z-50'>
       <div className='hidden md:block'>
         <DeskNav isNavHidden={isNavHidden} />
       </div>
