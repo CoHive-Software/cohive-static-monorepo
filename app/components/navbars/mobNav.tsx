@@ -37,7 +37,7 @@ export default function MobNav({ isNavHidden }) {
   return (
     <>
       <nav
-        className='w-full flex fixed justify-between items-center text-md px-6 py-5 top-0 left-0 z-50'
+        className='w-full flex fixed justify-between items-center text-md px-6 py-5 top-0 left-0'
         style={{
           backgroundColor: '#282a38',
           borderBottom: '2px solid #FFFFFF',
