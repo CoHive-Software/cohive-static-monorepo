@@ -1,4 +1,4 @@
-import ContactUsButton from "../buttons/ContactUsButton";
+import SmallContactUsButton from "../buttons/SmallContactUsButton";
 import Image from "next/image";
 interface ServiceCardProps {
   title: string;
@@ -8,12 +8,12 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, logoURL }: ServiceCardProps) {
   return (
-    <div className="bg-gradient-to-t from-gray to-gray-mid p-6 rounded flex flex-col justify-center items-center w-72">
-      <Image src={logoURL} width={240} height={240} alt={`${title} Image`} />
-      <h3 className="text-center text-pearl text-lg font-bold mb-2">{title}</h3>
-      <p className="text-center text-gray-light">{description}</p>
-      <div className="mt-4">
-        <ContactUsButton />
+    <div className="bg-gradient-to-t from-gray to-gray-mid p-5 rounded grid grid-cols-1 grid-rows-4 items-left w-72 gap-2">
+      <Image className='' src={logoURL} width={260} height={260} alt={`${title} Image`} />
+      <h3 className="text-white text-xl font-light justify-self-start mt-3 w-3/5">{title}</h3>
+      <p className="text-white font-light">{description}</p>
+      <div className=''>
+        <SmallContactUsButton />
       </div>
     </div>
   );
