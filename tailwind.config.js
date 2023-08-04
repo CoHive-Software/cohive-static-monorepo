@@ -27,12 +27,16 @@ module.exports = {
       'brown': '#C17E2F'
     },
     extend: {
+      borderRadius: {
+        DEFAULT: '32px',
+      },
       fontFamily: {
         serif: ['var(--font-abril)', 'serif'],
         sans: ['var(--font-lato)', ...fontFamily.sans],
       },
       splashBackgroundImage: "url(/honeycombGradient.jpg)",
     },
+
   },
   plugins: [],
 }
