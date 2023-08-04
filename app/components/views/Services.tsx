@@ -1,4 +1,3 @@
-import ContactUsButton from "../buttons/ContactUsButton";
 import ServiceCard from "../cards/serviceCard";
 
 const serviceTypes = [{
@@ -16,8 +15,8 @@ const serviceTypes = [{
 
 export default function Services() {
   return (
-    <div className="flex justify-center items-center p-2 mb-16">
-      <div className="grid grid-cols-1 mx-6 p-4 md:grid-cols-3 gap-4 w-4/5 [&>*]:my-3">
+    <div className="flex justify-center items-center mb-16">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 [&>*]:my-3">
         {serviceTypes.map(service => (
           <ServiceCard title={service.title} description={service.description} />
         ))}
