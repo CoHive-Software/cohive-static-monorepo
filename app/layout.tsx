@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang='en' className={`${lato.variable} ${abril.variable}`}>
       <body>
         <Navigation />
-        <main className='flex-1 my-8 mx-5'>{children}</main>
+        <main className='flex-1 my-8 mx-2'>{children}</main>
         <Footer />
       </body>
     </html>
