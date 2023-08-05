@@ -21,7 +21,6 @@ module.exports = {
         'mid': '#93949b',
         DEFAULT:'#424450'
     },
-
       'orange': {
         'light': '#FECE3C',
         DEFAULT: '#FCAB1C',
