@@ -4,7 +4,7 @@ import Services from './components/views/Services';
 
 export default function Page() {
   return (
-    <div className="h-full flex flex-col items-center md:pt-36">
+    <div className="flex flex-col items-center justify-between lg:pt-24">
       <Splash />
       {/* <AboutUs /> */}
       <Services />
