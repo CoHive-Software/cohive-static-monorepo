@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-// import Contact from '../contact/contact'
+import Contact from '../contact/contact'
 
 export default function Footer() {
   return (
@@ -45,8 +45,8 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        {/* <Contact /> */}
-        <div className='w-full flex justify-between text-xl px-3 py-3'>
+        <Contact />
+        <div className='flex justify-between text-xl py-3 my-2'>
           <div className='text-xs'>All Rights Reserved</div>
           <div className='flex items-center'>
             <ul className='list-none flex'>
