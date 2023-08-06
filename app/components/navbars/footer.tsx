@@ -5,13 +5,13 @@ import Contact from '../contact/contact'
 export default function Footer() {
   return (
     <footer
-      className='w-full'
+      className='flex justify-center'
       style={{
         backgroundColor: '#282a38',
         color: '#FFFFFF',
       }}
     >
-      <div className='w-7/12 flex flex-col justify-center border-t mx-auto'>
+      <div className='w-7/12 flex flex-col justify-center border-t'>
         <div className='w-full flex flex-col md:flex-row justify-center md:justify-between flex-wrap text-md py-3 mb-3'>
           <div className='md:w-auto md:order-1'>
             <div className='flex items-center justify-center md:justify-start'>
