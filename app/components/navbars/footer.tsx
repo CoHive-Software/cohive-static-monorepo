@@ -40,9 +40,9 @@ export default function Footer() {
             <Link className='mx-4 my-2' href='/blog'>
               blog
             </Link>
-            <Link className='mx-4 my-2' href='/contact'>
+            {/* <Link className='mx-4 my-2' href='/contact'>
               contact
-            </Link>
+            </Link> */}
           </div>
         </div>
         <Contact />
