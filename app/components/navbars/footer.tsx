@@ -1,17 +1,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
-// import Contact from '../contact/contact'
+import Contact from '../contact/contact'
 
 export default function Footer() {
   return (
     <footer
-      className='w-full'
+      className='flex justify-center'
       style={{
         backgroundColor: '#282a38',
         color: '#FFFFFF',
       }}
     >
-      <div className='w-7/12 flex flex-col justify-center border-t mx-auto'>
+      <div className='w-7/12 flex flex-col justify-center border-t'>
         <div className='w-full flex flex-col md:flex-row justify-center md:justify-between flex-wrap text-md py-3 mb-3'>
           <div className='md:w-auto md:order-1'>
             <div className='flex items-center justify-center md:justify-start'>
@@ -40,13 +40,13 @@ export default function Footer() {
             <Link className='mx-4 my-2' href='/blog'>
               blog
             </Link>
-            <Link className='mx-4 my-2' href='/contact'>
+            {/* <Link className='mx-4 my-2' href='/contact'>
               contact
-            </Link>
+            </Link> */}
           </div>
         </div>
-        {/* <Contact /> */}
-        <div className='w-full flex justify-between text-xl px-3 py-3'>
+        <Contact />
+        <div className='flex justify-between text-xl py-3 my-2'>
           <div className='text-xs'>All Rights Reserved</div>
           <div className='flex items-center'>
             <ul className='list-none flex'>
