@@ -40,10 +40,10 @@ export default function DeskNav({ isNavHidden }) {
                   <Link href='/projects'>projects</Link>
                 </li>
                 <li className='mx-12'>
-                  <Link href='/blog'>contact</Link>
+                  <Link href='#contact'>contact</Link>
                 </li>
                 <li>
-                  <Link href='/contact'>blog</Link>
+                  <Link href='/blog'>blog</Link>
                 </li>
               </ul>
             </div>
