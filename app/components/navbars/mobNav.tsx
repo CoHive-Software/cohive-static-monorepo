@@ -7,20 +7,28 @@ function useMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    hamburger.addEventListener('click', mobileMenu);
-
-    function mobileMenu() {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', mobileMenu);
+      const navLinks = document.querySelectorAll('.nav-item');
+      navLinks.forEach((n) => n.addEventListener('click', closeMenu));
     }
 
-    const navLink = document.querySelectorAll('.nav-link');
-
-    navLink.forEach((n) => n.addEventListener('click', closeMenu));
+    function mobileMenu() {
+      if (hamburger) {
+        hamburger.classList.toggle('active');
+      }
+      if (navMenu) {
+        navMenu.classList.toggle('active');
+      }
+    }
 
     function closeMenu() {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
+      if (hamburger) {
+        hamburger.classList.remove('active');
+      }
+      if (navMenu) {
+        navMenu.classList.remove('active');
+      }
     }
   }, []);
 }
@@ -67,7 +75,7 @@ export default function MobNav({ isNavHidden }) {
             <Link href='/blog'>Blogs</Link>
           </li>
           <li className='nav-item'>
-            <Link href='/contact'>Contact Us</Link>
+            <Link className='navLink' href='#contact'>Contact Us</Link>
           </li>
         </ul>
         <div className='hamburger'>
