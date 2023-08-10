@@ -38,7 +38,12 @@ module.exports = {
       gridTemplateRows: {
         '4': '6fr 2fr 2fr 1fr',
       },
-      splashBackgroundImage: "url(/honeycombGradient.jpg)",
+      backgroundImage: {
+        'bg-bees': "url('/bgBees.svg')"
+      },
+      backgroundPosition: {
+        'top-6': '2rem 6rem'
+      },
     },
 
   },

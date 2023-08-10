@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en' className={`${lato.variable} ${abril.variable}`}>
-      <body>
+      <body className="md:bg-bg-bees bg-cover bg-top-6 bg-no-repeat bg-fixed">
         <Navigation />
         <main className='flex-1 my-1 mx-2'>{children}</main>
         <Footer />
