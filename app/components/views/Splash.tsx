@@ -10,7 +10,7 @@ export default function Splash() {
         <ContactUsButton/>
       </div>
       <div className="p-3 mx-14 mt-6 lg:m-6 flex align-center justify-center">
-        <Image className="drop-shadow-[0_0_100px_rgba(254,206,60,.5)] md:drop-shadow-[0_0_100px_rgba(254,206,60,.3)]" src='/circleLogo3.svg' width={500} height={500} alt="beehive" />
+        <Image className="drop-shadow-[0_0_75px_rgba(254,206,60,.5)] md:drop-shadow-[0_0_50px_rgba(254,206,60,0.5)]" src='/circleLogo3.svg' width={500} height={500} alt="beehive" />
       </div>
 
     </div>
