@@ -51,12 +51,12 @@
     border-bottom-width: 2px;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 0px 27px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0 0px 27px rgba(0, 0, 0, 0.05); */
     background-color: #282a38;
   }
 
   .nav-menu.active {
-    top: 5.1rem;
+    top: 5rem;
   }
 
   .nav-item {

@@ -22,9 +22,44 @@ export default function Contact() {
     setMessage(e.target.value);
   };
 
+  const sendDiscordMessage = async () => {
+    const roleId = '1126197552610549852';
+    const roleMention = `<@&${roleId}>`;
+    const content = `
+      ${roleMention}
+      New Contact Form Submission:
+      Name: ${name}
+      Email: ${email}
+      Business: ${business}
+      Message: ${message}
+    `;
+
+    try {
+      const response = await fetch('/api/sendDiscordMessage', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ content }),
+      });
+
+      if (response.ok) {
+        console.log('Message sent to Discord successfully');
+      } else {
+        console.error('Failed to send message to Discord');
+      }
+    } catch (error) {
+      console.error('Error sending message to Discord:', error);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email)
+    sendDiscordMessage();
+    setEmail('');
+    setName('');
+    setBusiness('');
+    setMessage('');
   };
 
   return (
