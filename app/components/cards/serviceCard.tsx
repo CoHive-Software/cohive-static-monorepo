@@ -8,11 +8,11 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, logoURL }: ServiceCardProps) {
   return (
-    <div className="bg-gradient-to-t from-gray to-gray-mid p-5 rounded grid grid-cols-1 grid-rows-4 items-left w-72 gap-2">
+    <div className="bg-gradient-to-t from-gray to-gray-mid p-5 rounded flex flex-col items-start w-72 gap-2">
       <Image className='' src={logoURL} width={260} height={260} alt={`${title} Image`} />
-      <h3 className="text-white text-xl font-light justify-self-start mt-3 w-3/5">{title}</h3>
+      <h3 className="text-white text-lg font-light justify-self-start mt-3 w-3/5">{title}</h3>
       <p className="text-white font-light">{description}</p>
-      <div className=''>
+      <div className='mt-auto'>
         <SmallContactUsButton />
       </div>
     </div>
