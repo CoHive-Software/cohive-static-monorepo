@@ -18,7 +18,7 @@ const serviceTypes = [{
 
 export default function Services() {
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center w-7/12'>
 
       <h2 className='text-white text-3xl font-light tracking-wider'>Our <span className='text-orange'>Services</span></h2>
       <hr className='h-0.5 bg-gradient-to-r from-transparent via-white to-transparent w-full mt-3 mb-10' />
