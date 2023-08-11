@@ -7,7 +7,7 @@
 
 This Monorepo uses the Turborepo starter
 
-## Using this example
+## How this Monorepo was created:
 
 Run the following command:
 
@@ -15,15 +15,24 @@ Run the following command:
 npx create-turbo@latest
 ```
 
+## Kick it off:
+`cohive-general-purpose` <-- root
+```sh
+npm run dev
+```
+_this will kick off all `dev` scripts in each subsequent `app` through the `turborepo.json` "dev" pipeline_
+_[turborepo tasks pipeline docs](https://turbo.build/repo/docs/handbook/dev#setup-with-turborepo)_
+
 ## What's inside?
 
 This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
-
-- `web`: [Next.js](https://nextjs.org/) app serving CoHive Software Static site
-- `email-server`: an Amazon SES email server coupled to CoHive Domain
-- `discord-twilio-bot`: a Node.js server to persist Discord Bot with Twilio SDK for SMS and Email push notifications
+##### Apps
+- `CoHive-Site`: [Next.js](https://nextjs.org/) app serving CoHive Software Static site
+- `discord-ticket-bot`: a Node.js server to persist Discord Bot with Twilio SDK for SMS and Email push notifications
+- `docs`: an Amazon SES email server coupled to CoHive Domain
+##### Packages
 - `ui`: a stub React component library shared by both `web` and `docs` applications [tbd]
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
