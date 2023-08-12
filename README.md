@@ -7,12 +7,31 @@
 
 This Monorepo uses the Turborepo starter
 
-## Using this example
+## How this Monorepo was created:
 
 Run the following command:
+(spin this up in a fresh repo if this runs off the rails to compare...)
 
 ```sh
 npx create-turbo@latest
+```
+
+## Kick it off:
+from the root: `cohive-general-purpose`
+```sh
+# cd cohive-general-purpose # <-- if you are not already in the root
+npm run dev
+```
+_this will kick off all `dev` scripts in each subsequent `app` && `package` through the `turborepo.json` "dev" pipeline_
+_[turborepo tasks pipeline docs](https://turbo.build/repo/docs/handbook/dev#setup-with-turborepo)_
+
+### Build
+
+To build all apps and packages, run the following command:
+
+```
+cd cohive-general-purpose
+npm build
 ```
 
 ## What's inside?
@@ -20,15 +39,17 @@ npx create-turbo@latest
 This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
-
-- `web`: [Next.js](https://nextjs.org/) app serving CoHive Software Static site
-- `email-server`: an Amazon SES email server coupled to CoHive Domain
-- `discord-twilio-bot`: a Node.js server to persist Discord Bot with Twilio SDK for SMS and Email push notifications
-- `ui`: a stub React component library shared by both `web` and `docs` applications [tbd]
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+##### Apps
+- `coHive-site`: [Next.js](https://nextjs.org/) app serving [CoHive Software Static site](https://github.com/CoHive-Software/CoHive-Site)
+- `discord-ticket-bot`: a Node.js server to persist [Discord Bot with Twilio](https://github.com/CoHive-Software/discord-ticket-bot) SDK for SMS and Email push notifications
+- `docs`: documentation of the APIs
+##### Packages
+- `ui`: a stub React component library shared by `docs` application and pending others... [tbd]
+- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`) [unsure if this is used]
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Each package is 100% [TypeScript](https://www.typescriptlang.org/).
+Apps are 66% TS, 33% JS
 
 ### Utilities
 
@@ -37,24 +58,6 @@ This Turborepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-npm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-npm dev
-```
 
 ### Remote Caching
 
