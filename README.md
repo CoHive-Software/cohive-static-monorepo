@@ -10,6 +10,7 @@ This Monorepo uses the Turborepo starter
 ## How this Monorepo was created:
 
 Run the following command:
+(spin this up in a fresh repo if this runs off the rails to compare...)
 
 ```sh
 npx create-turbo@latest
