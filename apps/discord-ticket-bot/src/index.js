@@ -47,8 +47,6 @@ discord.on("messageCreate", (message) => {
   /* this validation disallows bots from responding to each other/themselves, remove at your own risk 💀 */
   if (message.author.bot) return;
 
-  console.log("LOOK HERE", message.createdAt + 24);
-
   if (message.channel.parentId === "1126197975983591534" && message.channel.messageCount === 1) {
     const projectName = message.channel.name;
     const projectOwner = message.author.username;
