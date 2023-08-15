@@ -9,7 +9,7 @@ export default function Page() {
       <Splash />
       {/* <AboutUs /> */}
       <Services />
-      <div className="hidden lg:flex items-center justify-center">
+      <div className="hidden md:flex items-center justify-center">
         <Projects />
       </div>
     </div>
