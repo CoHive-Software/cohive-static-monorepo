@@ -34,15 +34,12 @@ export default function Footer() {
             </div>
           </div>
           <div className='flex flex-wrap justify-center md:justify-start md:items-center md:order-2'>
-            <Link className='mx-4 my-2' href='/projects'>
+            <Link className='mx-4 my-2' href='#projects'>
               projects
             </Link>
             <Link className='mx-4 my-2' href='/blog'>
               blog
             </Link>
-            {/* <Link className='mx-4 my-2' href='/contact'>
-              contact
-            </Link> */}
           </div>
         </div>
         <Contact />
