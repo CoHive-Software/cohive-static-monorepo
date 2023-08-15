@@ -1,6 +1,7 @@
 import Splash from './components/views/Splash';
 import AboutUs from './components/views/AboutUs'
 import Services from './components/views/Services';
+import Projects from './components/views/Projects';
 
 export default function Page() {
   return (
@@ -8,6 +9,7 @@ export default function Page() {
       <Splash />
       {/* <AboutUs /> */}
       <Services />
+      <Projects />
     </div>
   );
   //<h2 className={'font-sans'}>Hello, CoHive!</h2>

@@ -63,19 +63,13 @@ export default function MobNav({ isNavHidden }) {
         </a>
         <ul className='nav-menu'>
           <li className='nav-item'>
-            <Link href='/about'>About Us</Link>
+            <Link href='/projects'>projects</Link>
           </li>
           <li className='nav-item'>
-            <Link href='/services'>Services</Link>
+            <Link href='/blog'>blog</Link>
           </li>
           <li className='nav-item'>
-            <Link href='/projects'>Projects</Link>
-          </li>
-          <li className='nav-item'>
-            <Link href='/blog'>Blogs</Link>
-          </li>
-          <li className='nav-item'>
-            <Link className='navLink' href='#contact'>Contact Us</Link>
+            <Link className='navLink' href='#contact'>contact</Link>
           </li>
         </ul>
         <div className='hamburger'>
