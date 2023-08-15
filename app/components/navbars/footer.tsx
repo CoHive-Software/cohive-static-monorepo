@@ -34,12 +34,12 @@ export default function Footer() {
             </div>
           </div>
           <div className='flex flex-wrap justify-center md:justify-start md:items-center md:order-2'>
-            <div className='mx-4 my-2 lg:hidden'>
+            <div className='mx-4 my-2 md:hidden'>
               <Link href='/projects'>
                 projects
               </Link>
             </div>
-            <div className='hidden lg:block'>
+            <div className='hidden md:block'>
               <Link href='#projects'>projects</Link>
             </div>
             <Link className='mx-4 my-2' href='/blog'>
