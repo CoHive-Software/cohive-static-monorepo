@@ -9,7 +9,9 @@ export default function Page() {
       <Splash />
       {/* <AboutUs /> */}
       <Services />
-      <Projects />
+      <div className="hidden lg:flex items-center justify-center">
+        <Projects />
+      </div>
     </div>
   );
   //<h2 className={'font-sans'}>Hello, CoHive!</h2>
