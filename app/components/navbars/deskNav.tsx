@@ -14,7 +14,7 @@ export default function DeskNav({ isNavHidden }) {
           animation: `${animationClassName}`
         }}
       >
-        <div className='flex flex-col items-center w-10/12  2xl:justify-around 2xl:w-full text-md'>
+        <div className='flex flex-col items-center justify-around w-full text-md'>
           <div className='flex flex-row justify-around w-full px-6 py-6'>
             <div className='flex items-center'>
               <Link href='/' className='flex items-center'>
@@ -37,7 +37,7 @@ export default function DeskNav({ isNavHidden }) {
             <div className='flex items-center'>
               <ul className='list-none flex'>
                 <li>
-                  <Link href='/projects'>projects</Link>
+                  <Link href='#projects'>projects</Link>
                 </li>
                 <li className='mx-12'>
                   <Link href='#contact'>contact</Link>
@@ -48,7 +48,7 @@ export default function DeskNav({ isNavHidden }) {
               </ul>
             </div>
           </div>
-          <div className='border-b w-2/3 xl:w-7/12 2xl:w-1/2'>
+          <div className='border-b w-7/12'>
           </div>
         </div>
       </nav>
