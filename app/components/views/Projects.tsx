@@ -26,8 +26,9 @@ export default function Projects() {
 
   return (
     <div id='projects' className='hidden md:flex flex-col justify-center items-start w-7/12 mb-4'>
-      <hr className='h-0.5 bg-gradient-to-r from-transparent via-white to-transparent w-full mt-3 mb-10' />
-      <h2 className='text-white text-3xl font-light tracking-wider mb-6'>Completed <span className='text-orange'>Projects</span></h2>
+
+      <h2 className='text-white text-3xl font-light tracking-wider self-center'>Completed <span className='text-orange'>Projects</span></h2>
+      <div className='h-0.5 bg-gradient-to-r from-transparent via-white to-transparent w-full mt-3 mb-10 self-center' />
       <div className='flex flex-col'>
         <Image
           className='mb-2 rounded-md'
