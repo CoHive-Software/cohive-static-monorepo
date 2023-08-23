@@ -18,10 +18,13 @@ const serviceTypes = [{
 
 export default function Services() {
   return (
-    <div className='flex flex-col justify-center items-center w-7/12'>
+    <div className='flex flex-col justify-center items-center w-11/12 mt-6 lg:mt-0'>
 
-      <h2 className='text-white text-3xl font-light tracking-wider'>Our <span className='text-orange'>Services</span></h2>
-      <hr className='h-0.5 bg-gradient-to-r from-transparent via-white to-transparent w-full mt-3 mb-10' />
+      <h2 className='text-white text-3xl font-light tracking-wider mb-6'>Our <span className='text-orange'>Services</span></h2>
+      <div className="w-screen flex justify-center">
+        <div className='h-0.5 bg-gradient-to-r from-transparent via-white to-transparent w-7/12 mt-3 mb-10' />
+
+      </div>
       <div className="flex justify-center items-center mb-16">
         <div className="flex flex-row flex-wrap justify-center lg: gap-4 [&>*]:my-3">
           {serviceTypes.map(service => (
