@@ -9,7 +9,7 @@ export default function Page() {
       <Splash />
       {/* <AboutUs /> */}
       <Services />
-      <Projects />
+      {/* <Projects /> */}
     </div>
   );
   //<h2 className={'font-sans'}>Hello, CoHive!</h2>
