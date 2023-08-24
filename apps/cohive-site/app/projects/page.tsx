@@ -19,8 +19,8 @@ export default function Page() {
 
   return (
     <div className='flex flex-col justify-center items-center pt-6'>
-      {projects.map(project => (
-        <div className='flex flex-col items-center mb-2'>
+      {projects.map((project, i) => (
+        <div className='flex flex-col items-center mb-2' key={i}>
           <Image
             className='mb-2 rounded-md'
             src={project[0]}
