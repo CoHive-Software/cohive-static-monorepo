@@ -2,40 +2,40 @@ import { useLayoutEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function useMobileMenu() {
-  useLayoutEffect(() => {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+// function useMobileMenu() {
+//   useLayoutEffect(() => {
+//     const hamburger = document.querySelector('.hamburger');
+//     const navMenu = document.querySelector('.nav-menu');
 
-    if (hamburger && navMenu) {
-      hamburger.addEventListener('click', mobileMenu);
-      const navLinks = document.querySelectorAll('.nav-item');
-      navLinks.forEach((n) => n.addEventListener('click', closeMenu));
-    }
+//     if (hamburger && navMenu) {
+//       hamburger.addEventListener('click', mobileMenu);
+//       const navLinks = document.querySelectorAll('.nav-item');
+//       navLinks.forEach((n) => n.addEventListener('click', closeMenu));
+//     }
 
-    function mobileMenu() {
-      if (hamburger) {
-        hamburger.classList.toggle('active');
-      }
-      if (navMenu) {
-        navMenu.classList.toggle('active');
-      }
-    }
+//     function mobileMenu() {
+//       if (hamburger) {
+//         hamburger.classList.toggle('active');
+//       }
+//       if (navMenu) {
+//         navMenu.classList.toggle('active');
+//       }
+//     }
 
-    function closeMenu() {
-      if (hamburger) {
-        hamburger.classList.remove('active');
-      }
-      if (navMenu) {
-        navMenu.classList.remove('active');
-      }
-    }
-  }, []);
-}
+//     function closeMenu() {
+//       if (hamburger) {
+//         hamburger.classList.remove('active');
+//       }
+//       if (navMenu) {
+//         navMenu.classList.remove('active');
+//       }
+//     }
+//   }, []);
+// }
 
 export default function MobNav({ isNavHidden }) {
   // This is what give the Hamburger menu its functionality //
-  useMobileMenu();
+  // useMobileMenu();
   /////////////////////////////////////////////////////////////
 
   const animationClassName = isNavHidden
@@ -62,27 +62,27 @@ export default function MobNav({ isNavHidden }) {
           />
         </a>
         <ul className='nav-menu'>
-          <li className='nav-item'>
-            <Link href='/about'>About Us</Link>
+          {/* <li className='nav-item'>
+            <Link href='/projects'>projects</Link>
           </li>
           <li className='nav-item'>
-            <Link href='/services'>Services</Link>
-          </li>
-          <li className='nav-item'>
-            <Link href='/projects'>Projects</Link>
-          </li>
-          <li className='nav-item'>
-            <Link href='/blog'>Blogs</Link>
-          </li>
-          <li className='nav-item'>
-            <Link className='navLink' href='#contact'>Contact Us</Link>
-          </li>
+            <Link href='/blog'>blog</Link>
+          </li> */}
+          {/* <li className='nav-item'>
+            <Link className='navLink' href='#contact'>contact</Link>
+          </li> */}
         </ul>
-        <div className='hamburger'>
+        <ul className='list-none flex text-pearl '>
+          <li>
+            <Link href='#contact'>Contact Us</Link>
+            </li>
+        </ul>
+
+        {/* <div className='hamburger'>
           <span className='bar'></span>
           <span className='bar'></span>
           <span className='bar'></span>
-        </div>
+        </div> */}
       </nav>
     </>
   );
